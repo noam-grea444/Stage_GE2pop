@@ -1,0 +1,14 @@
+Corpus txt -> corpus genome  prédire nucleotide
+Nvidia Evo2 pertinence du modele sur nos problématiques par rapport aux méthodes standard
+S’approprier les outils, à quel point ça marche déjà :
+estimer l’impact d’une mutation 
+- Methode classique (transmission si pas trop handicapante, on regarde si on voit le changement -> plausible  sinon c’est pas bien) Soit un gène je prend la même séquence chez différents individu : quand ça varie pas ça pose une contrainte, elle devient plus forte quand on élargit le spectre d’étude. Aligner les séquences puis analyser. Pas facile de retrouver un gène surtout si peu contraint. Gros jeu de données, compliqué à trouver. 
+- Methode IA (soit une séquence je prédis le nucleotide d’après si probabilismes quasi nul alors mutation délétère est baisse de la fitness (fit à l’environnement) pas besoin d’aligner pour entrainer (récupérer la partie codante puis aligner) bcp de génomes disponibles. Pour la vraisemblance on prend avant et on peut après puis ratio entre les deux, pas vraiment aligné, mutation synonyme si mm acide aminé. Intron exon et synonyme pas synonyme ça marche 
+Le modele apprend des règles vrai sans qu’on lui explique (différence synonyme non synomyme un peu la base mais il a quand même appris tout seul mais si c’est juste ça c’est pas fou)
+Fine tuning, polymorphisme (variation)
+On entraine spécifiquement avec un jeu de donné qu’on connait
+Récupérer la version light de evo2 (arrondi pour les poids) 7 milliards de paramètres  installer lama pixi
+1Mb de donnée -> petit evo2 -> nucleotide suivant ou vraisemblance de la séquence fichier de config le faire tourner (petit Evo2) proba prochain et vraisemblance entre deux série 
+Récupérer l’encodage dernier niveau du dernier niveau de neurones (embeding) clustering sur des séquences  si différence de taille entre deux génomes mais très proches est-ce que ça se retrouve à la fin
+Est-ce que ça vaut le coup de fine tuner précisément sur les especes voulues (groupe taxonomique) 
+Tutoriel 
